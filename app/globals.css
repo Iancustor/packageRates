@@ -2,32 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    15deg,
+    rgba(255, 255, 255, 0.3),
+    rgb(205, 185, 227)
+  );
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.top-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.top-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.topdescptn {
+  color: rgb(71, 71, 71);
+  font-weight: 400;
+}
+.top-btns {
+  display: flex;
+  gap: 1rem;
+}
+.top-btn {
+  background: white;
+  padding: 0.3rem 1.5rem;
+  border-radius: 10px;
+}
+.active-btn {
+  background: rgb(121, 5, 210);
+  color: whitesmoke;
+  padding: 0.3rem 1.5rem;
+  border-radius: 10px;
+}
+.active-card-btn {
+  background: rgb(7, 1, 11);
+  color: whitesmoke;
+  padding: 0.3rem 1.5rem;
+  border-radius: 10px;
+}
+.cards-container {
+  width: 65vw;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: linear-gradient(15deg, rgba(255, 255, 255, 0), white);
+  padding: 1.5rem 1rem;
+  border-radius: 18px;
+}
+.active-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: linear-gradient(rgb(211, 179, 244), rgba(255, 255, 255, 0.637));
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 1.5rem 1rem;
+  border-radius: 18px;
+}
+
+.card-heading {
+  background: rgb(121, 5, 210);
+  color: whitesmoke;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.active-card-heading {
+  background: white;
+  color: black;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+.card-price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+small {
+  font-size: 12px;
+  font-weight: lighter;
+}
+li {
+  display: flex;
+  gap: 0.8rem;
+}
+.card-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-btn {
+  background: white;
+  padding: 0.3rem 6rem;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.active-card-btn {
+  background: rgb(19, 0, 38);
+  color: whitesmoke;
+  padding: 0.3rem 6rem;
+  border-radius: 5px;
+  font-weight: 500;
 }
